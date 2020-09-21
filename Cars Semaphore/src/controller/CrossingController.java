@@ -3,9 +3,9 @@ package controller;
 import java.util.concurrent.Semaphore;
 
 public class CrossingController extends Thread{
-  private Semaphore semaphore;
-  private int idCarro;
-  private String [] directions = {"norte", "sul", "leste", "oeste"};
+  private final Semaphore semaphore;
+  private final int idCarro;
+  private final String [] directions = {"norte", "sul", "leste", "oeste"};
   private static int i;
 
   public CrossingController(Semaphore semaphore, int idCarro) {
